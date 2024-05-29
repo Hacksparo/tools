@@ -5,127 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tools - Hacksparo Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .navbar {
+            background-color: #1a1a1a;
+            border-bottom: 2px solid #00ff00;
+            padding: 10px;
+        }
+        .navbar a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .arrow-back {
+            color: #00ff00;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .arrow-back:hover {
+            color: #00cc00;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            padding: 10px;
+            border-top: 2px solid #00ff00;
+            text-align: center;
+        }
+    </style>
 </head>
-<body class="min-h-screen flex flex-col bg-gray-900 text-white font-mono">
-    <!-- Navigation -->
+<body class="min-h-screen flex flex-col">
     <header class="navbar">
-        <nav class="container mx-auto flex justify-center relative">
-            <div class="menu flex flex-col items-center">
-                <a href="index.html">Home</a>
-                <a href="writeups.html">Writeups</a>
-                <a href="resources.html">Resources</a>
-                <a href="about.html">About Me</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <button id="menuButton" class="text-2xl">☰</button>
+        <nav class="container mx-auto flex justify-center">
+            <a href="../../">&#8592; Back</a>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="flex-grow container mx-auto p-4">
-        <section>
-            <h1 class="text-center text-3xl font-semibold mb-4">Tools</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- Nmap -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">Nmap</h2>
-                    <p class="text-gray-400">Nmap (Network Mapper) is a free and open-source network scanning tool used to discover hosts and services on a computer network, thus creating a "map" of the network. It is commonly used by network administrators and security professionals for network inventory, managing service upgrade schedules, and monitoring host or service uptime.</p>
-                    <a href="https://nmap.org/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- Hydra -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">Hydra</h2>
-                    <p class="text-gray-400">Hydra is a powerful online password-cracking tool used to perform rapid dictionary attacks or brute-force attacks against many different services. It supports various protocols including HTTP, HTTPS, SSH, FTP, Telnet, and more.</p>
-                    <a href="https://github.com/vanhauser-thc/thc-hydra" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- Burp Suite -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">Burp Suite</h2>
-                    <p class="text-gray-400">Burp Suite is a leading web application security testing toolkit that helps security professionals identify vulnerabilities and verify attack vectors during security assessments. It provides various tools for web application security testing, including scanning, crawling, and exploitation.</p>
-                    <a href="https://portswigger.net/burp" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- Wireshark -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">Wireshark</h2>
-                    <p class="text-gray-400">Wireshark is a network protocol analyzer used for troubleshooting, analysis, development, and education. It allows users to capture and interactively browse the traffic running on a computer network.</p>
-                    <a href="https://www.wireshark.org/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- Metasploit -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">Metasploit</h2>
-                    <p class="text-gray-400">Metasploit is a penetration testing framework that makes hacking simple. It provides information about security vulnerabilities and aids in penetration testing and IDS signature development.</p>
-                    <a href="https://www.metasploit.com/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- John the Ripper -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">John the Ripper</h2>
-                    <p class="text-gray-400">John the Ripper is a fast password cracker, primarily designed to detect weak Unix passwords. It is one of the most popular password cracking tools used by hackers and security professionals.</p>
-                    <a href="https://www.openwall.com/john/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- Aircrack-ng -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">Aircrack-ng</h2>
-                    <p class="text-gray-400">Aircrack-ng is a network software suite consisting of a detector, packet sniffer, WEP and WPA/WPA2-PSK cracker, and analysis tool for wireless LANs. It is widely used for testing the security of wireless networks.</p>
-                    <a href="https://www.aircrack-ng.org/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- SQLMap -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">SQLMap</h2>
-                    <p class="text-gray-400">SQLMap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over database servers. It is commonly used by security professionals to perform SQL injection attacks.</p>
-                    <a href="https://sqlmap.org/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- Hashcat -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">Hashcat</h2>
-                    <p class="text-gray-400">Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attacks for over 300 highly-optimized hashing algorithms. It is used to crack passwords via dictionary, rule-based, or brute-force attacks.</p>
-                    <a href="https://hashcat.net/hashcat/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- OWASP ZAP -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">OWASP ZAP</h2>
-                    <p class="text-gray-400">OWASP ZAP (Zed Attack Proxy) is an open-source web application security scanner used for finding security vulnerabilities in web applications during the development and testing phases. It is designed to be used by people with a wide range of security experience and is a great tool for both manual and automated security testing.</p>
-                    <a href="https://www.zaproxy.org/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- OpenSSL -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">OpenSSL</h2>
-                    <p class="text-gray-400">OpenSSL is a robust, full-featured, and open-source toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library used for secure communication in various applications.</p>
-                    <a href="https://www.openssl.org/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- Aircrack-ng -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">Aircrack-ng</h2>
-                    <p class="text-gray-400">Aircrack-ng is a network software suite consisting of a detector, packet sniffer, WEP and WPA/WPA2-PSK cracker, and analysis tool for wireless LANs. It is widely used for testing the security of wireless networks.</p>
-                    <a href="https://www.aircrack-ng.org/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-                <!-- Metasploit -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-semibold mb-4">Metasploit</h2>
-                    <p class="text-gray-400">Metasploit is a penetration testing framework that makes hacking simple. It provides information about security vulnerabilities and aids in penetration testing and IDS signature development.</p>
-                    <a href="https://www.metasploit.com/" target="_blank" class="text-blue-400 hover:underline mt-4 inline-block">Learn More</a>
-                </div>
-            </div>
+        <h1 class="text-center text-3xl font-semibold mb-4">Tools</h1>
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Tool 1: Nmap -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Nmap</h2>
+                <p class="text-gray-400">Nmap (Network Mapper) is a free and open-source network scanning tool used to discover hosts and services on a computer network, thus creating a "map" of the network. It is commonly used by network administrators and security professionals for network inventory, managing service upgrade schedules, and monitoring host or service uptime.</p>
+                <a href="https://nmap.org/" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Tool 2: Hydra -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Hydra</h2>
+                <p class="text-gray-400">Hydra is a powerful online password-cracking tool used to perform rapid dictionary attacks or brute-force attacks against many different services. It supports various protocols including HTTP, HTTPS, SSH, FTP, Telnet, and more.</p>
+                <a href="https://github.com/vanhauser-thc/thc-hydra" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Tool 3: Burp Suite -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Burp Suite</h2>
+                <p class="text-gray-400">Burp Suite is a leading web application security testing toolkit that helps security professionals identify vulnerabilities and verify attack vectors during security assessments. It provides various tools for web application security testing, including scanning, crawling, and exploitation.</p>
+                <a href="https://portswigger.net/burp" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Tool 4: Hashcat -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Hashcat</h2>
+                <p class="text-gray-400">Hashcat is a powerful password recovery tool for over 300 highly-optimized hashing algorithms. It is used to crack passwords via dictionary, rule-based, or brute-force attacks.</p>
+                <a href="https://hashcat.net/hashcat/" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Tool 5: OWASP ZAP -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">OWASP ZAP</h2>
+                <p class="text-gray-400">OWASP ZAP (Zed Attack Proxy) is an open-source web application security scanner used for finding security vulnerabilities in web applications during the development and testing phases. It is designed to be used by people with a wide range of security experience and is a great tool for both manual and automated security testing.</p>
+                <a href="https://www.zaproxy.org/" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Tool 6: OpenSSL -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">OpenSSL</h2>
+                <p class="text-gray-400">OpenSSL is a robust, full-featured, and open-source toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library used for secure communication in various applications.</p>
+                <a href="https://www.openssl.org/" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Tool 7: John the Ripper -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">John the Ripper</h2>
+                <p class="text-gray-400">John the Ripper is a fast password cracker, currently available for many flavors of Unix, macOS, Windows, DOS, BeOS, and OpenVMS. It is designed to be both powerful and flexible and is well-suited for password cracking tasks including dictionary attacks, brute-force attacks, and rainbow table attacks.</p>
+                <a href="https://www.openwall.com/john/" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Tool 8: Metasploit -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Metasploit</h2>
+                <p class="text-gray-400">Metasploit is a penetration testing framework that makes hacking simple. It provides information about security vulnerabilities and aids in penetration testing and IDS signature development. With Metasploit, users can test security systems and networks for weaknesses.</p>
+                <a href="https://www.metasploit.com/" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Tool 9: Wireshark -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Wireshark</h2>
+                <p class="text-gray-400">Wireshark is a free and open-source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education. Wireshark lets users capture and interactively browse the traffic running on a computer network.</p>
+                <a href="https://www.wireshark.org/" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Tool 10: Aircrack-ng -->
+            <article class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-semibold mb-4">Aircrack-ng</h2>
+                <p class="text-gray-400">Aircrack-ng is a network software suite consisting of a detector, packet sniffer, WEP and WPA/WPA2-PSK cracker, and analysis tool for 802.11 wireless LANs. It works with any wireless network interface controller whose driver supports raw monitoring mode and can sniff 802.11a, 802.11b, 802.11g, and 802.11n traffic.</p>
+                <a href="https://www.aircrack-ng.org/" class="text-blue-400 hover:underline mt-4 inline-block" target="_blank">Learn More</a>
+            </article>
+            <!-- Add more articles for additional tools as needed -->
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto">
+    <footer class="footer">
         <div class="container text-center">
             <p>&copy; 2024 Hacksparo Blog. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Script for Menu Toggle -->
-    <script>
-        document.getElementById('menuButton').addEventListener('click', function() {
-            const menu = document.querySelector('.navbar .menu');
-            if (menu.style.display === 'flex') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'flex';
-            }
-        });
-    </script>
 </body>
 </html>
 
